@@ -19,7 +19,7 @@ The solution adopts two basic techniques for deriving the final results with ext
 
 First it runs the Canny Edge Detection to detect all the sharp edges in an image. Then it extracts the edges which are closed only and removing all others including lines and curves (a road sign shape is always a closed figure). After that, it considers the closed shapes which have area greater than 30% of the whole image area (a sign in cropped image contains larger portion of the image). This filter removes all small shapes which are not required including text inside the sign. We then compute a ratio r of the perimeter of a shape to its area and considering the one with smallest ratio. This technique removes all the irregular shapes as shown below:
 
-<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/master/ScreenShots/_ratio.png" width=1000/>
+<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/main/ScreenShots/_ratio.png" width=1000/>
 
 Once the desired shape is extracted, finally we apply some contour approximation methos inlcuding Convex Hull and approxPolyDP to first fill out any broken pieces of shape and then finding the number of vertices which gives us the final shape.
 
@@ -29,13 +29,13 @@ Third, even if color based segmentation fails to work, we then compute bounding 
 
 ## Gallery
 
-<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/master/ScreenShots/sample_1.png" width=1000/>
-<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/master/ScreenShots/sample_2.png" width=1000/>
-<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/master/ScreenShots/sample_3.png" width=1000/>
-<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/master/ScreenShots/sample_4.png" width=1000/>
-<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/master/ScreenShots/sample_5.png" width=1000/>
-<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/master/ScreenShots/sample_6.png" width=1000/>
-<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/master/ScreenShots/sample_7.png" width=1000/>
+<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/main/ScreenShots/sample_1.png" width=1000/>
+<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/main/ScreenShots/sample_2.png" width=1000/>
+<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/main/ScreenShots/sample_3.png" width=1000/>
+<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/main/ScreenShots/sample_4.png" width=1000/>
+<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/main/ScreenShots/sample_5.png" width=1000/>
+<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/main/ScreenShots/sample_6.png" width=1000/>
+<img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/main/ScreenShots/sample_7.png" width=1000/>
 
 
 ## How to run the Code
@@ -43,9 +43,9 @@ Clone the repository and head over to the root directory. Enter the following co
     
     python run.py --images_path=images --verbose=1
     
- Flags:
- --images_path (default ./images) : specify the path to the images directory. The direcotry must contain images.
- --verbose (default 1): specify the verbosity level. Either 1 or 0. Prints out the shapes in terminal when verbose=0 else visualize the steps involved while processing the image graphically.
+### Flags:
+1. --images_path (default ./images) : specify the path to the images directory. The direcotry must contain images.
+2. --verbose (default 1): specify the verbosity level. Either 1 or 0. Prints out the shapes in terminal when verbose=0 else visualize the steps involved while processing the image graphically.
  
  
  # References
