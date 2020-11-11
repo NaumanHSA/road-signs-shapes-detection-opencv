@@ -38,6 +38,15 @@ Third, even if color based segmentation fails to work, we then compute bounding 
 <img src="https://github.com/NaumanHSA/road-signs-shapes-detection-opencv/blob/main/ScreenShots/sample_7.png" width=1000/>
 
 
+## Requirements
+    
+    python: 3.x
+    matplotlib: 3.2.0
+    numpy: 1.18.5
+    scikit_learn: 0.23.2
+    opencv-python: 4.2.0
+    
+
 ## How to run the Code
 Clone the repository and head over to the root directory. Enter the following command with two flags to specify.
     
