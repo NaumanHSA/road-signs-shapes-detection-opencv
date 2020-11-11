@@ -44,8 +44,8 @@ Clone the repository and head over to the root directory. Enter the following co
     python run.py --images_path=images --verbose=1
     
 ### Flags:
-1. --images_path (default ./images) : specify the path to the images directory. The direcotry must contain images.
-2. --verbose (default 1): specify the verbosity level. Either 1 or 0. Prints out the shapes in terminal when verbose=0 else visualize the steps involved while processing the image graphically.
+1. **--images_path** (default ./images) : specify the path to the images directory. The direcotry must contain images.
+2. **--verbose** (default 1): specify the verbosity level. Either 1 or 0. Prints out the shapes in terminal when verbose=0 else visualize the steps involved while processing the image graphically.
  
  
  # References
